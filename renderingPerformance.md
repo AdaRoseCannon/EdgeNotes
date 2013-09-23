@@ -98,4 +98,22 @@ Hunt down repaints and fix them.
 * What about a gc hint?
 ..* This would just be another hack.
 * gc is an issue for games. If that is an issue for you then it is a hard problem. Memory problems are hard for games anyway deal with it.
-* 
+
+### Image decodes and resizes are expensive avoid these as a bottle neck.
+* Main thread code to intensive.
+* Threads not always the answer. Work smarter gpu work to gpu.
+..* this should be handled by the borwser.
+* try to avoid doing layout whever possible.
+
+### Highly image based webapp is slow even though it is simple what can be done?
+* This is a very difficult problem!!
+* Try batching your images.
+..* One by one, request animation frame?
+* What image types are faster?
+* Image coproessor?
+
+### Scrolling to load images is a massive antipattern on mobile.
+* Can the browser defer loading and decoding for when they pan in.
+* Web audio for images?
+
+### 
