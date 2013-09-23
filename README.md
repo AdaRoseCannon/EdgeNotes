@@ -1,0 +1,4 @@
+EdgeNotes
+=========
+
+My Edge notes.
