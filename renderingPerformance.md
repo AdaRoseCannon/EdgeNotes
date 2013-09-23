@@ -116,4 +116,25 @@ Hunt down repaints and fix them.
 * Can the browser defer loading and decoding for when they pan in.
 * Web audio for images?
 
-### 
+### What have been then biggest wins and wastes of time?
+>> Add property > read dom > goto 1
+* That is really bad try to queue reads and rights.
+* CSS selector matching is a big waste of time it's super fast in the browser.
+* Sticking redraws to layer and doing isolation is super useful.
+* Remove design elements. E.g. get rid of drop shadows and carosels. (Again yay for flat!!)
+
+### Image decoding is expensive can this be done in a webworker.
+* Paul Lewis wrote a library for it.
+* This is a super bad idea!! It can be done but you will shoot yourself in the foot.
+* Also will annhilate the battery.
+
+### How to make non-devs understand performance?
+* Show it to them on low end devices.
+* Demo over cellular network.
+* Show that is does impact engagement using facebook data.
+
+### You need to get data from other people with large audiences to get this data. Currently not known data. 
+* Page load performance is less important than render speed.
+
+### Cannot describe performance intent to the browser. E.g. priority of what should be rendered.
+* Paul disagrees with 'the browser should do everything for me' spec compliant code should give spec compliant results. Speed is not in the spec browsers try to make it fast. Such an api would be difficult to make to the point where it can be polyfilled for additional functionality.
